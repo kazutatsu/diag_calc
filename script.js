@@ -68,7 +68,7 @@ function generateTable(){
         rowArr.push("empty");
 
         const td = document.createElement('td');
-        td.textContent = `${i+1},${j+1}`;
+        // td.textContent = `${i+1},${j+1}`;
         td.dataset.layer = k - 1;
         td.dataset.row = i;
         td.dataset.col = j;
