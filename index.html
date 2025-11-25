@@ -2,8 +2,38 @@
 <head>
     <meta charset="utf-8">
     <title>Sample Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  hoge
+  <h1>いい感じに計算してくれます</h1>
+  <a>UpperHandの盤面を与えるとそれを斜めに描画するtikzのコードを返します.</a>
+  <div class="row-vars">
+    <div class="col">
+      <label for="m">行数(m)</label>
+      <input type="number" class="small-input" id="m" value="5" min="1" max="20">
+    </div>
+    <div class="col">
+      <label for="n" style="margin-left:12px;">列数(n)</label>
+      <input type="number" class="small-input" id="n" value="5" min="1" max="20">
+    </div>
+    <button id="generate">表を作成</button>
+  </div>
+  
+  <div class="color-select">
+    <button id="colorBlack" class="clr black">先手</button>
+    <button id="colorWhite" class="clr white">後手</button>
+    <button id="colorGray" class="clr gray">中立</button>
+    <button id="colorEmpty" class="clr empty">空</button>
+  </div>
+
+  <!-- <label for="text">入力()</label>
+  <textarea id="text" placeholder="ここに入力">行 列 色</textarea> -->
+
+  <div id="table-container"></div>
+  <button id="run">実行</button>
+
+  <label for="result">結果</label>
+  <textarea id="result" readonly placeholder="ここに表示されます"> </textarea>
+  <script src="script.js"></script>
 </body>
 </html>
